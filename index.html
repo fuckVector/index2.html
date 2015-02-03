@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Butterfly</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta name="viewport" content="initial-scale=1, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0"/>
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta http-equiv="Access-Control-Allow-Origin" content="*"/>
+
+  <meta http-equiv="X-Frame-Options" content="ALLOW-FROM">
+  <meta http-equiv="pragma" content="no-cache" />
+
+  <!-- 3rd part UI ratchet -->
+  <link href="./ratchet/css/ratchet.min.css" rel="stylesheet"/>
+  <!-- <link href="../ratchet/css/ratchet-theme-ios.min.css" rel="stylesheet"/> -->
+  <!-- butterfly.js UI -->
+  <link href="../butterfly/css/butterfly.css" rel="stylesheet"/>
+  <!-- theme -->
+  <link href="./theme.css" rel="stylesheet"/>
+
+  <script type="text/javascript" src='../cordova.js'></script>
+
+  <script type="text/javascript" src="../butterfly/js/require.js" data-main="../butterfly/js/butterfly-amd"></script>
+
+  <link rel="stylesheet" type="text/css" href="./main.css">
+  <link rel="stylesheet" type="text/css" href="./costom.css">
+
+</head>
+<body>
+
+    <div id="main" data-view="$StackView">
+
+      <div id="main-page" data-view="main/main">
+
+      <script type="text/template" id="module-tmpl">
+        <li data-identifier=<%=identifier%>>
+          <div class='module-wrapper'>
+            <img src="<%= icon == 'default' ? './icon.png' : 'http://bsl.foreveross.com/bsl-web/mam/attachment/download/' + icon%>">
+            <div class='app-title'><%=name%></div>
+          </div>
+        </li>
+      </script>
+
+      <header class="bar bar-nav">
+        <h1 class="title">变色龙展厅</h1>
+      </header>
+
+      <div class="content module-content">
+        <div id="wrapper" class="topic-gray">
+          <div id="scroller" class="">
+            <ul class="module-board">
+
+            </ul>
+          </div>
+        </div>
+      </div>
+      <nav class="bar bar-tab">
+        <a class="tab-item" href="#main/update.html">
+          <span class="icon icon-home"></span>
+          <span class="tab-label">模块管理</span>
+        </a>
+        <a class="tab-item" href="#main/login.html">
+          <span class="icon icon-person"></span>
+          <span class="tab-label">注销</span>
+        </a>
+      </nav>
+
+      </div>
+
+    </div>
+
+</body>
+</html>
